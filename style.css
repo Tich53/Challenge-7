@@ -2,4 +2,48 @@
     height: 80px;
     border-width: 2px;
     border-color: white;
+    animation: color-changing 10s ease-in 3s;
+}
+
+.container-fluid {
+    animation: move-hero 10s ease-in-out infinite;
+}
+
+
+/*Ne fonctionne pas ???*/
+@keyframes color-changing {
+    0%{
+        background-color: black;
+    }
+    25%{
+        background-color: brown;
+    }
+    50%{
+        background-color: blue;
+    }
+    100%{
+        background-color: orange;
+    }
+}
+@keyframes move-hero{
+    0% {
+        transform: translateY(10%);
+    }
+    10% {
+        transform: translateX(10%);
+    }
+    20%{
+        transform: translateY(20%);
+    }
+    30%{
+        transform: translateX(20%);
+    }
+    75% {
+        transform: translateX(50%);
+        transform: translateY(50%);
+    }
+    100%{
+        transform: translateX(0%);
+        transform: translateY(0%);
+    }
 }
